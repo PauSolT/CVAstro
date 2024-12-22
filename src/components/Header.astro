@@ -1,15 +1,15 @@
 <header>
     <div id="language">
-        <p>CAT</p>
-        <p>ESP</p>
-        <p>ENG</p>
+        <p class="headerElement">CAT</p>
+        <p class="headerElement">ESP</p>
+        <p class="headerElement">ENG</p>
     </div>
     <div id="space"></div>
     <nav>
-        <a href="/">Home</a>
-        <a href="/Games">Games</a>
-        <a href="/About">About</a>
-        <a href="/About">Contact me</a>
+        <a class="headerElement" href="/">HOME</a>
+        <a class="headerElement" href="/games">GAMES</a>
+        <a class="headerElement" href="/about">ABOUT</a>
+        <a class="headerElement" href="/about">CONTACT ME</a>
     </nav>
 </header>
 
@@ -41,6 +41,12 @@
         flex-grow: 2;
         align-items: flex-end;
     }
+
+    nav > a {
+        color: inherit;
+        text-decoration: none;
+    }
+
     #space {
         display: flex;
         flex-grow: 7;
