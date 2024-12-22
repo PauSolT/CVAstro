@@ -4,10 +4,12 @@
         <p>ESP</p>
         <p>ENG</p>
     </div>
+    <div id="space"></div>
     <nav>
         <a href="/">Home</a>
         <a href="/Games">Games</a>
         <a href="/About">About</a>
+        <a href="/About">Contact me</a>
     </nav>
 </header>
 
@@ -19,6 +21,23 @@
         margin-left: 2vw;
         margin-right: 2vw;
     }
-    
+    #language {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-self: center;
+        flex-grow: 1;
+        align-items: flex-end;
+    }
+    #space {
+        display: flex;
+        flex-grow: 4;
+    }
 
 </style>
