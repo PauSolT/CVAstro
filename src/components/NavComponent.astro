@@ -2,7 +2,7 @@
 const { link, content } = Astro.props
 ---
 
-<a class="" href={link}>{content}</a>
+<a class="component" href={link}>{content}</a>
 
 <style>
     a {
@@ -10,10 +10,10 @@ const { link, content } = Astro.props
         text-decoration: none;
     }
 
-    .headerElement {
+    .component {
         padding: 1%;
     }
-    .headerElement:hover {
+    .component:hover {
         background-color: #C5C6C7;
         color: #1F2833;
         cursor: pointer;
