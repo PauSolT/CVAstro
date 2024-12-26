@@ -1,8 +1,8 @@
 ---
-const { link, content } = Astro.props
+const { link, content, target = "_self" } = Astro.props
 ---
 
-<a class="component" href={link}>{content}</a>
+<a class="component" href={link} target={target}>{content}</a>
 
 <style>
     a {
