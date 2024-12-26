@@ -1,3 +1,7 @@
+---
+import NavComponent from "./NavComponent.astro";
+---
+
 <header>
     <div id="language">
         <p class="headerElement">CAT</p>
@@ -5,10 +9,10 @@
         <p class="headerElement">ENG</p>
     </div>
     <nav>
-        <a class="headerElement" href="/">HOME</a>
-        <a class="headerElement" href="/games">GAMES</a>
-        <a class="headerElement" href="/about">ABOUT</a>
-        <a class="headerElement" href="/about">CONTACT ME</a>
+        <NavComponent link="/" content="HOME" />
+        <NavComponent link="/games" content="GAMES" />
+        <NavComponent link="/about" content="ABOUT" />
+        <NavComponent link="/about" content="CONTACT ME" />
     </nav>
 </header>
 
