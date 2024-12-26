@@ -1,4 +1,5 @@
 ---
+import '@fontsource-variable/rubik'
 import Header from "../components/Header.astro"
 ---
 
@@ -18,10 +19,18 @@ import Header from "../components/Header.astro"
 </html>
 
 <style>
+	:root {
+		color-scheme: dark light;
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	html {
+		font-family: 'Rubik', system-ui, sans-serif;
 	}
 </style>
