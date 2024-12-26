@@ -4,7 +4,6 @@
         <p class="headerElement">ESP</p>
         <p class="headerElement">ENG</p>
     </div>
-    <div id="space"></div>
     <nav>
         <a class="headerElement" href="/">HOME</a>
         <a class="headerElement" href="/games">GAMES</a>
@@ -30,6 +29,7 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
+        max-width: 20%;
         flex-grow: 1;
     }
 
@@ -40,16 +40,12 @@
         align-self: center;
         flex-grow: 2;
         align-items: flex-end;
+        max-width: 40%;
     }
 
     nav > a {
         color: inherit;
         text-decoration: none;
-    }
-
-    #space {
-        display: flex;
-        flex-grow: 7;
     }
 
     .headerElement {
