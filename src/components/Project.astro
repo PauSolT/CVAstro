@@ -1,0 +1,36 @@
+---
+const { title, genre, description, srcImage } = Astro.props;
+---
+
+<div class="project">
+    <h3>{title}</h3>
+    <img src={srcImage} alt={title} class="projectImg" />
+    <h4>{genre}</h4>
+    <p>{description}</p>
+</div>
+
+<style>
+    .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #45a29e;
+    }
+    h3 {
+        font-style: italic;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    p {
+        color: #c5c6c7;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    .project .projectImg {
+        width: clamp(20%, 70%, 75%);
+        height: auto;
+    }
+</style>
