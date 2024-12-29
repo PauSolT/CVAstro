@@ -1,3 +1,10 @@
 ---
 const { title, genre, description, srcImage } = Astro.props
 ---
+
+<div class="project">
+    <h3>{title}</h3>
+    <img src={srcImage} alt={title} class='projectImg'></img>
+    <h4>{genre}</h4>
+    <p>{description}</p>
+</div>
