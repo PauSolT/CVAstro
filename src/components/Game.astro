@@ -14,3 +14,12 @@ const { title, description, srcImage, urlSite } = Astro.props;
     <Image src={srcImage} alt={title} class="responsiveImage" />
     <p>{description}</p>
 </div>
+
+<style>
+    .responsiveImage {
+        width: clamp(50%, 90%, 100%);
+        height: auto;
+        max-width: 100%;
+        max-height: 50%;
+    }
+</style>
