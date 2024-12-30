@@ -2,6 +2,7 @@
 import Game from "../components/Game.astro";
 import Layout from "../layouts/Layout.astro";
 
+import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.png";
 ---
 
 <Layout>
@@ -17,6 +18,12 @@ import Layout from "../layouts/Layout.astro";
             srcImage="https://img.itch.zone/aW1hZ2UvNDIxNDk3LzIxMDYxMzYucG5n/347x500/r%2FeS0B.png"
             description="Bilux was developed by a team of 2 developers. I developed the tutorial level and designed other levels, settings, UI, health system and implemented the music."
             urlSite="https://drhut94.itch.io/bilux"
+        />
+        <Game
+            title="3. SLIME DEFENSE"
+            srcImage={SlimeDefenseImage}
+            description="I developed this game on my own. It contains a wave and a shop system, different enemy types, music and optional ads."
+            urlSite="https://pausol.itch.io/slime-defense"
         />
     </div>
 </Layout>
