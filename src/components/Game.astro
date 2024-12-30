@@ -11,11 +11,19 @@ const { title, description, srcImage, urlSite } = Astro.props;
             <a target="_blank" rel="noreferrer" href={urlSite}> INFO+ </a>
         </h3>
     </div>
-    <Image src={srcImage} alt={title} class="responsiveImage" inferSize/>
+    <Image src={srcImage} alt={title} class="responsiveImage" inferSize />
     <p>{description}</p>
 </div>
 
 <style>
+    .game {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        padding-left: 7%;
+        padding-right: 7%;
+        margin-bottom: 10%;
+    }
     .responsiveImage {
         width: clamp(50%, 90%, 100%);
         height: auto;
