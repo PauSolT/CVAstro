@@ -11,7 +11,7 @@ const { title, description, srcImage, urlSite } = Astro.props;
             <a target="_blank" rel="noreferrer" href={urlSite}> INFO+ </a>
         </h3>
     </div>
-    <Image src={srcImage} alt={title} class="responsiveImage" />
+    <Image src={srcImage} alt={title} class="responsiveImage" inferSize/>
     <p>{description}</p>
 </div>
 
