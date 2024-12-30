@@ -5,4 +5,10 @@ const { title, description, urlImage, urlSite } = Astro.props;
 ---
 
 <div class="game">
+    <div class="gameHeader">
+        <h3>{title}</h3>
+        <h3>
+            <a target="_blank" rel="noreferrer" href={urlSite}> INFO+ </a>
+        </h3>
+    </div>
 </div>
