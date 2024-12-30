@@ -1,7 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Game from "../components/Game.astro";
+import Layout from "../layouts/Layout.astro";
+
+import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.png";
+import StarTapsImage from "../../src/assets/Images/StarTaps.jpg";
 ---
 
 <Layout>
-    
+    <div class="gamesList">
+        <Game
+            title="1. BEKKUS"
+            srcImage="https://img.itch.zone/aW1hZ2UvNjI3NjA4LzM0MDA0NzkucG5n/347x500/ZCjbFA.png"
+            description='Bekkus was developed by a team of 2 artists and 2 developers using the scrum methodology. I developed the logic of "bekkus", quest system, settings, UI, help the artists implement some parts of the map, and implement the music.'
+            urlSite="https://ottarastudio.itch.io/bekkus"
+        />
+        <Game
+            title="2. BILUX"
+            srcImage="https://img.itch.zone/aW1hZ2UvNDIxNDk3LzIxMDYxMzYucG5n/347x500/r%2FeS0B.png"
+            description="Bilux was developed by a team of 2 developers. I developed the tutorial level and designed other levels, settings, UI, health system and implemented the music."
+            urlSite="https://drhut94.itch.io/bilux"
+        />
+        <Game
+            title="3. SLIME DEFENSE"
+            srcImage={SlimeDefenseImage}
+            description="I developed this game on my own. It contains a wave and a shop system, different enemy types, music and optional ads."
+            urlSite="https://pausol.itch.io/slime-defense"
+        />
+        <Game
+            title="4. STAR TAPS"
+            srcImage={StarTapsImage}
+            description="I developed this game on my own. It has different planets and satelites to unlock, prestige system to generate stars faster and music."
+            urlSite="https://pausol.itch.io/star-taps"
+        />
+    </div>
 </Layout>
+
+<style>
+    .gamesList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+</style>
