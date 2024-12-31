@@ -1,10 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Pau from "../assets/Images/paucv1.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
     <div class="aboutPage">
         <div class="aboutTitle">
+            <h1>PAU SOLÉ TORRALBA</h1>
+            <Image src={Pau} alt="pau" class="pauImage" loading={"eager"} />
         </div>
     </div>
 </Layout>
