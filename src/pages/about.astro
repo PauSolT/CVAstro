@@ -1,7 +1,163 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ContactMe from "../components/ContactMe.astro";
+import Layout from "../layouts/Layout.astro";
+import Pau from "../assets/Images/paucv1.jpg";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
-    
+    <div class="aboutPage">
+        <div class="aboutTitle">
+            <h1>PAU SOLÉ TORRALBA</h1>
+            <Image src={Pau} alt="pau" class="pauImage" loading={"eager"} />
+        </div>
+        <h2>
+            VIDEOGAME DEVELOPMENT TECHNICIAN, APPLIED GAMES AND MOBILE
+            APPLICATIONS
+        </h2>
+        <h4>
+            Versatile video game programmer, with the ability to adapt to
+            technological changes and eager to continue learning. I have the
+            ability to focus completely on what concerns my work and I am used
+            to working in teams. I consider myself an effective person who is
+            committed to his work.
+        </h4>
+
+        <div class="formation">
+            <h3>FORMATION</h3>
+
+            <h4>
+                CERTIFICATE OF HIGHER EDUCATION IN CROSS-PLATFORM APPLICATION
+                DEVELOPMENT
+            </h4>
+            <p>La Salle Gràcia | Sep 2024 - May 2026</p>
+
+            <h4>VIDEOGAME SPECIALIZATION COURSE</h4>
+            <p>Institut Pedralbes | Sep 2024 - May 2025</p>
+
+            <h4>
+                CERTIFICATE OF HIGHER EDUCATION IN CROSS-PLATFORM APPLICATION
+                DEVELOPMENT FOR VIDEO GAMES
+            </h4>
+            <p>ENTI-UB | Sep 2018 - Jun 2020</p>
+
+            <h4>TECHNOLOGYC HIGH-SCHOOL</h4>
+            <p>INS Vila de Gràcia | Sep 2016 - Jun 2018</p>
+        </div>
+        <div class="knowledge">
+            <div>
+                <h3>KNOWLEDGE</h3>
+                <div class="knowledgeList">
+                    <ul>
+                        <li>Unity</li>
+                        <li>Unreal Engine</li>
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                    <ul>
+                        <li>C#</li>
+                        <li>ReactJS</li>
+                        <li>HTML/CSS/JS</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>LANGUAGES</h3>
+                <ul>
+                    <li>Catalan</li>
+                    <li>Spanish</li>
+                    <li>English</li>
+                </ul>
+            </div>
+        </div>
+        <div class="workExperience">
+            <h3>WORK EXPERIENCE</h3>
+            <h4>FULL STACK DEVELOPER</h4>
+            <h5>Ship Quik Tecnologia S.L. | Jul 2021- Mar 2022</h5>
+            <p>
+                Frontend and backend programmer of the web page using ReactJS,
+                Redux, NodeJS, MUI, Formik and NPM with Agile metodology.
+            </p>
+            <h4>DEVELOPER (INTERNSHIPS)</h4>
+            <h5>Twentic S.L. | Oct 2019 - Mar 2020</h5>
+            <p>
+                Creation and programming of a virtual reality route of a
+                property on a map, with Unity.
+            </p>
+            <p>
+                Programming of a 2D platform game with score table per server
+                and multiple levels, with Phaser.
+            </p>
+        </div>
+        <ContactMe />
+    </div>
 </Layout>
+
+<style>
+    .aboutPage {
+        max-width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #c5c6c7;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        color: #66fcf1;
+    }
+
+    h2 {
+        text-align: justify;
+        color: #66fcf1;
+    }
+
+    .aboutTitle {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        gap: 100px
+    }
+
+    .pauImage {
+        width: clamp(20%, 25%, 30%);
+        height: clamp(20%, 25%, 30%);
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        margin-block-start: 0.67em;
+        border-radius: 25px;
+    }
+
+    .formation {
+        border-top: 6px solid #45a29e;
+        width: 100%;
+    }
+
+    .knowledge {
+        border-top: 6px solid #45a29e;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .knowledge > h3 {
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+    .knowledgeList {
+        display: flex;
+        flex-direction: row;
+    }
+    .knowledgeList > li {
+        white-space: nowrap;
+    }
+
+    .workExperience {
+        border-top: 6px solid #45a29e;
+        border-bottom: 6px solid #45a29e;
+        width: 100%;
+    }
+</style>
