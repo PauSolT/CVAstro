@@ -8,10 +8,10 @@ import NavComponent from "./NavComponent.astro";
     </div>
     <nav>
         <NavComponent
-        target="_blank"
-        link="https://www.linkedin.com/in/pau-sol%C3%A9-torralba-bb8b14176/"
-        content="LINKEDIN"
-    />
+            target="_blank"
+            link="https://www.linkedin.com/in/pau-sol%C3%A9-torralba-bb8b14176/"
+            content="LINKEDIN"
+        />
         <NavComponent
             target="_blank"
             link="https://github.com/PauSolT"
@@ -22,13 +22,11 @@ import NavComponent from "./NavComponent.astro";
             link="https://pausol.itch.io"
             content="ITCH.IO"
         />
-       
     </nav>
 </footer>
 
 <style>
     footer {
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -47,7 +45,13 @@ import NavComponent from "./NavComponent.astro";
         flex-direction: row;
         justify-content: space-around;
         margin-right: 5%;
-        gap: 10%;
+        gap: 5%;
         align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 760px) {
+        nav {
+            margin-right: 15%;
+        }
     }
 </style>
