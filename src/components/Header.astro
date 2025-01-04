@@ -14,6 +14,15 @@ import NavComponent from "./NavComponent.astro";
         <NavComponent link="/about" content="ABOUT" />
         <NavComponent link="/about" content="CONTACT ME" />
     </nav>
+    <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+        <div class="dropdown-content">
+            <a class="component" href="/" >HOME</a>
+            <a class="component" href="/games" >GAMES</a>
+            <a class="component" href="/about" >ABOUT</a>
+            <a class="component" href="/about" >CONTACT ME</a>
+        </div>
+    </div>
 </header>
 
 <style>
