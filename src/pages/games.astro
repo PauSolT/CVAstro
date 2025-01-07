@@ -2,21 +2,23 @@
 import Game from "../components/Game.astro";
 import Layout from "../layouts/Layout.astro";
 
-import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.png";
-import StarTapsImage from "../../src/assets/Images/StarTaps.jpg";
+import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.webp";
+import StarTapsImage from "../../src/assets/Images/StarTaps.webp";
+import BekkusImage from "../../src/assets/Images/bekkus.webp";
+import BiluxImage from "../../src/assets/Images/bilux.webp";
 ---
 
 <Layout>
     <div class="gamesList">
         <Game
             title="1. BEKKUS"
-            srcImage="https://img.itch.zone/aW1hZ2UvNjI3NjA4LzM0MDA0NzkucG5n/347x500/ZCjbFA.png"
+            srcImage={BekkusImage}
             description='Bekkus was developed by a team of 2 artists and 2 developers using the scrum methodology. I developed the logic of "bekkus", quest system, settings, UI, help the artists implement some parts of the map, and implement the music.'
             urlSite="https://ottarastudio.itch.io/bekkus"
         />
         <Game
             title="2. BILUX"
-            srcImage="https://img.itch.zone/aW1hZ2UvNDIxNDk3LzIxMDYxMzYucG5n/347x500/r%2FeS0B.png"
+            srcImage={BiluxImage}
             description="Bilux was developed by a team of 2 developers. I developed the tutorial level and designed other levels, settings, UI, health system and implemented the music."
             urlSite="https://drhut94.itch.io/bilux"
         />
