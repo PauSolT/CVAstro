@@ -6,6 +6,8 @@ import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.webp";
 import StarTapsImage from "../../src/assets/Images/StarTaps.webp";
 import BekkusImage from "../../src/assets/Images/bekkus.webp";
 import BiluxImage from "../../src/assets/Images/bilux.webp";
+
+import { t } from "i18next";
 ---
 
 <Layout>
@@ -13,25 +15,25 @@ import BiluxImage from "../../src/assets/Images/bilux.webp";
         <Game
             title="1. BEKKUS"
             srcImage={BekkusImage}
-            description='Bekkus was developed by a team of 2 artists and 2 developers using the scrum methodology. I developed the logic of "bekkus", quest system, settings, UI, help the artists implement some parts of the map, and implement the music.'
+            description={t("bekkusGame")}
             urlSite="https://ottarastudio.itch.io/bekkus"
         />
         <Game
             title="2. BILUX"
             srcImage={BiluxImage}
-            description="Bilux was developed by a team of 2 developers. I developed the tutorial level and designed other levels, settings, UI, health system and implemented the music."
+            description={t("biluxGame")}
             urlSite="https://drhut94.itch.io/bilux"
         />
         <Game
             title="3. SLIME DEFENSE"
             srcImage={SlimeDefenseImage}
-            description="I developed this game on my own. It contains a wave and a shop system, different enemy types, music and optional ads."
+            description={t("slimeGame")}
             urlSite="https://pausol.itch.io/slime-defense"
         />
         <Game
             title="4. STAR TAPS"
             srcImage={StarTapsImage}
-            description="I developed this game on my own. It has different planets and satelites to unlock, prestige system to generate stars faster and music."
+            description={t("starGame")}
             urlSite="https://pausol.itch.io/star-taps"
         />
     </div>
