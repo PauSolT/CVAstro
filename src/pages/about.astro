@@ -3,6 +3,8 @@ import ContactMe from "../components/ContactMe.astro";
 import Layout from "../layouts/Layout.astro";
 import Pau from "../assets/Images/paucv1.webp";
 import { Image } from "astro:assets";
+
+import { t } from "i18next";
 ---
 
 <Layout>
@@ -12,41 +14,30 @@ import { Image } from "astro:assets";
             <Image src={Pau} alt="pau" class="pauImage" loading={"eager"} />
         </div>
         <h2>
-            VIDEOGAME DEVELOPMENT TECHNICIAN, APPLIED GAMES AND MOBILE
-            APPLICATIONS
+            {t("grade")}
         </h2>
         <h4>
-            Versatile video game programmer, with the ability to adapt to
-            technological changes and eager to continue learning. I have the
-            ability to focus completely on what concerns my work and I am used
-            to working in teams. I consider myself an effective person who is
-            committed to his work.
+            {t("description")}
         </h4>
 
         <div class="formation">
-            <h3>FORMATION</h3>
+            <h3>{t("formation")}</h3>
 
-            <h4>
-                CERTIFICATE OF HIGHER EDUCATION IN CROSS-PLATFORM APPLICATION
-                DEVELOPMENT
-            </h4>
-            <p>La Salle Gràcia | Sep 2024 - May 2026</p>
+            <h4>{t("form3")}</h4>
+            <p>{t("form3Date")}</p>
 
-            <h4>VIDEOGAME SPECIALIZATION COURSE</h4>
-            <p>Institut Pedralbes | Sep 2024 - May 2025</p>
+            <h4>{t("form4")}</h4>
+            <p>{t("form4Date")}</p>
 
-            <h4>
-                CERTIFICATE OF HIGHER EDUCATION IN CROSS-PLATFORM APPLICATION
-                DEVELOPMENT FOR VIDEO GAMES
-            </h4>
-            <p>ENTI-UB | Sep 2018 - Jun 2020</p>
+            <h4>{t("form1")}</h4>
+            <p>{t("form1Date")}</p>
 
-            <h4>TECHNOLOGYC HIGH-SCHOOL</h4>
-            <p>INS Vila de Gràcia | Sep 2016 - Jun 2018</p>
+            <h4>{t("form2")}</h4>
+            <p>{t("form2Date")}</p>
         </div>
         <div class="knowledge">
             <div>
-                <h3>KNOWLEDGE</h3>
+                <h3>{t("knowledge")}</h3>
                 <div class="knowledgeList">
                     <ul>
                         <li>Unity</li>
@@ -63,7 +54,7 @@ import { Image } from "astro:assets";
                 </div>
             </div>
             <div>
-                <h3>LANGUAGES</h3>
+                <h3>{t("languages")}</h3>
                 <ul>
                     <li>Catalan</li>
                     <li>Spanish</li>
@@ -72,22 +63,19 @@ import { Image } from "astro:assets";
             </div>
         </div>
         <div class="workExperience">
-            <h3>WORK EXPERIENCE</h3>
+            <h3>{t("work")}</h3>
             <h4>FULL STACK DEVELOPER</h4>
-            <h5>Ship Quik Tecnologia S.L. | Jul 2021- Mar 2022</h5>
+            <h5>{t("work1Date")}</h5>
             <p>
-                Frontend and backend programmer of the web page using ReactJS,
-                Redux, NodeJS, MUI, Formik and NPM with Agile metodology.
+                {t("work1Description")}
             </p>
-            <h4>DEVELOPER (INTERNSHIPS)</h4>
-            <h5>Twentic S.L. | Oct 2019 - Mar 2020</h5>
+            <h4>{t("work2")}</h4>
+            <h5>{t("work2Date")}</h5>
             <p>
-                Creation and programming of a virtual reality route of a
-                property on a map, with Unity.
+                {t("work2Description1")}
             </p>
             <p>
-                Programming of a 2D platform game with score table per server
-                and multiple levels, with Phaser.
+                {t("work2Description2")}
             </p>
         </div>
         <ContactMe />
@@ -170,6 +158,5 @@ import { Image } from "astro:assets";
         .aboutTitle {
             gap: 0;
         }
-
     }
 </style>
