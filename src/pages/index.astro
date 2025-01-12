@@ -4,6 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.webp";
 import BekkusImage from "../../src/assets/Images/bekkus.webp";
 import BiluxImage from "../../src/assets/Images/bilux.webp";
+
+import { t } from "i18next";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -14,35 +16,31 @@ import BiluxImage from "../../src/assets/Images/bilux.webp";
             <h1>PAU SOLÉ</h1>
             <h2>GAME AND WEB DEVELOPER</h2>
             <h3>
-                I'm a versatile developer, with the ability to adapt to
-                technological changes and eager to continue learning. I have the
-                ability to focus completely on what concerns my work and I am
-                used to working in teams. I consider myself an effective person
-                who is committed to his work.
+                {t("homeDescription")}
             </h3>
         </div>
         <div class="projectList">
-            <h2>PROJECTS</h2>
+            <h2>{t("projectsTitle")}</h2>
             <Project
                 title="1. BEKKUS"
-                genre="3D ADVENTURE GAME"
+                genre={t("bekkusGenre")}
                 srcImage={BekkusImage}
                 loadImageType="eager"
-                description="A young scientist was travelling around the world when suddenly a meteor crashed, releasing all kind of creatures with its impact. Now, determined as ever, the young scientist has decided to investigate them and gather as much information as she can by photographing them."
+                description={t("bekkusDescription")}
             />
             <Project
                 title="2. BILUX"
-                genre="2D PLATFORM GAME"
+                genre={t("biluxGenre")}
                 srcImage={BiluxImage}
                 loadImageType="lazy"
-                description="Bilux is a game in which you will have to use movement mechanics to overcome the different levels. At first it may seem easy but you will quickly find levels where you will have to use your ingenuity and speed of response to overcome them."
+                description={t("biluxDescription")}
             />
             <Project
                 title="3. SLIME DEFENSE"
-                genre="2D TOWER DEFENSE"
+                genre={t("slimeGenre")}
                 srcImage={SlimeDefenseImage}
                 loadImageType="lazy"
-                description="Slime Defense is a casual tower defense for mobile that consists of surviving waves of slimes while defending the king slime. Will you be able to survive to the highest wave?"
+                description={t("slimeDescription")}
             />
         </div>
     </div>
