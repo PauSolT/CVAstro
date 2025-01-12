@@ -1,5 +1,8 @@
 ---
 import NavComponent from "./NavComponent.astro";
+
+import { t } from "i18next";
+
 ---
 
 <header>
@@ -9,18 +12,18 @@ import NavComponent from "./NavComponent.astro";
         <p class="headerElement">ENG</p>
     </div>
     <nav class="desktop">
-        <NavComponent link="/" content="HOME" />
-        <NavComponent link="/games" content="GAMES" />
-        <NavComponent link="/about" content="ABOUT" />
-        <NavComponent link="/about" content="CONTACT ME" />
+        <NavComponent link="/" content={t("home")} />
+        <NavComponent link="/games" content={t("games")} />
+        <NavComponent link="/about" content={t("about")} />
+        <NavComponent link="/about" content={t("contactMe")} />
     </nav>
     <div class="dropdown">
-        <button class="dropbtn">MENU</button>
+        <button class="dropbtn">{t("menu")}</button>
         <div class="dropdown-content">
-            <a class="component" href="/" >HOME</a>
-            <a class="component" href="/games" >GAMES</a>
-            <a class="component" href="/about" >ABOUT</a>
-            <a class="component" href="/about" >CONTACT ME</a>
+            <a class="component" href="/" >{t("home")}</a>
+            <a class="component" href="/games" >{t("games")}</a>
+            <a class="component" href="/about" >{t("about")}</a>
+            <a class="component" href="/about" >{t("contactMe")}</a>
         </div>
     </div>
 </header>
