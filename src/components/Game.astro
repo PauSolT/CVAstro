@@ -11,7 +11,9 @@ const { title, description, srcImage, urlSite } = Astro.props;
             <a target="_blank" rel="noreferrer" href={urlSite}> INFO+ </a>
         </h3>
     </div>
-    <Image src={srcImage} alt={title} class="responsiveImage" inferSize />
+    <a target="_blank" rel="noreferrer" href={urlSite}>
+        <Image src={srcImage} alt={title} class="responsiveImage" inferSize />
+    </a>
     <p>{description}</p>
 </div>
 
@@ -27,7 +29,7 @@ const { title, description, srcImage, urlSite } = Astro.props;
         width: clamp(50%, 90%, 100%);
         height: auto;
         width: 100%;
-        max-height: 66%;
+        max-height: 100%;
     }
 
     h3,
