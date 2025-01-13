@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
 
-const { title, genre, description, srcImage, loadImageType, urlSite } =
+const { title, genre, description, srcImage, loadImageType, urlSite, titleText } =
     Astro.props;
 ---
 
 <div class="project">
     <h3>{title}</h3>
-    <a target="_blank" href={urlSite}>
+    <a title={titleText} target="_blank" href={urlSite}>
         <Image
             src={srcImage}
             alt={title}
