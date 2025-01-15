@@ -1,12 +1,12 @@
 ---
-import Project from "../components/Project.astro";
-import Layout from "../layouts/Layout.astro";
-import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.webp";
-import BekkusImage from "../../src/assets/Images/bekkus.webp";
-import BiluxImage from "../../src/assets/Images/bilux.webp";
+import Project from "../../components/Project.astro";
+import Layout from "../../layouts/Layout.astro";
+import SlimeDefenseImage from "../../../src/assets/Images/SlimeDefense.webp";
+import BekkusImage from "../../../src/assets/Images/bekkus.webp";
+import BiluxImage from "../../../src/assets/Images/bilux.webp";
 import { t, changeLanguage } from "i18next";
 
-changeLanguage("en");
+changeLanguage("es");
 ---
 
 <Layout>
@@ -26,8 +26,6 @@ changeLanguage("en");
                 srcImage={BekkusImage}
                 loadImageType="eager"
                 description={t("bekkusDescription")}
-                urlSite="https://ottarastudio.itch.io/bekkus"
-                titleText="Go to Bekkus!"
             />
             <Project
                 title="2. BILUX"
@@ -35,8 +33,6 @@ changeLanguage("en");
                 srcImage={BiluxImage}
                 loadImageType="lazy"
                 description={t("biluxDescription")}
-                urlSite="https://drhut94.itch.io/bilux"
-                titleText="Go to Bilux!"
             />
             <Project
                 title="3. SLIME DEFENSE"
@@ -44,8 +40,6 @@ changeLanguage("en");
                 srcImage={SlimeDefenseImage}
                 loadImageType="lazy"
                 description={t("slimeDescription")}
-                urlSite="https://pausol.itch.io/slime-defense"
-                titleText="Go to Slime Defense!"
             />
         </div>
     </div>
@@ -63,10 +57,11 @@ changeLanguage("en");
 
     h1,
     h2 {
-        color: #66fcf1;
+        color: #66FCF1;
     }
 
     h3 {
-        color: #45a29e;
+        color: #45A29E;
     }
+
 </style>

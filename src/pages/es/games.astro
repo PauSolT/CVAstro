@@ -1,13 +1,13 @@
 ---
-import Game from "../components/Game.astro";
-import Layout from "../layouts/Layout.astro";
-import SlimeDefenseImage from "../../src/assets/Images/SlimeDefense.webp";
-import StarTapsImage from "../../src/assets/Images/StarTaps.webp";
-import BekkusImage from "../../src/assets/Images/bekkus.webp";
-import BiluxImage from "../../src/assets/Images/bilux.webp";
+import Game from "../../components/Game.astro";
+import Layout from "../../layouts/Layout.astro";
+import SlimeDefenseImage from "../../../src/assets/Images/SlimeDefense.webp";
+import StarTapsImage from "../../../src/assets/Images/StarTaps.webp";
+import BekkusImage from "../../../src/assets/Images/bekkus.webp";
+import BiluxImage from "../../../src/assets/Images/bilux.webp";
 import { t, changeLanguage } from "i18next";
 
-changeLanguage("en");
+changeLanguage("es");
 ---
 
 <Layout>
@@ -17,28 +17,24 @@ changeLanguage("en");
             srcImage={BekkusImage}
             description={t("bekkusGame")}
             urlSite="https://ottarastudio.itch.io/bekkus"
-            titleText="Go to Bekkus!"
         />
         <Game
             title="2. BILUX"
             srcImage={BiluxImage}
             description={t("biluxGame")}
             urlSite="https://drhut94.itch.io/bilux"
-            titleText="Go to Bilux!"
         />
         <Game
             title="3. SLIME DEFENSE"
             srcImage={SlimeDefenseImage}
             description={t("slimeGame")}
             urlSite="https://pausol.itch.io/slime-defense"
-            titleText="Go to Slime Defense!"
         />
         <Game
             title="4. STAR TAPS"
             srcImage={StarTapsImage}
             description={t("starGame")}
             urlSite="https://pausol.itch.io/star-taps"
-            titleText="Go to Star Taps!"
         />
     </div>
 </Layout>
