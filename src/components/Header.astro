@@ -1,29 +1,27 @@
 ---
+import { LanguageSelector } from "astro-i18next/components";
 import NavComponent from "./NavComponent.astro";
 
 import { t } from "i18next";
-
+// @ts-ignore
+import { localizePath } from "astro-i18next";
 ---
 
 <header>
-    <div id="language">
-        <p class="headerElement">CAT</p>
-        <p class="headerElement">ESP</p>
-        <p class="headerElement">ENG</p>
-    </div>
+    <LanguageSelector  class="customLanguageSelector"/>
     <nav class="desktop">
-        <NavComponent link="/" content={t("home")} />
-        <NavComponent link="/games" content={t("games")} />
-        <NavComponent link="/about" content={t("about")} />
-        <NavComponent link="/about" content={t("contactMe")} />
+        <NavComponent link={localizePath("/")} content={t("home")} />
+        <NavComponent link={localizePath("/games")} content={t("games")} />
+        <NavComponent link={localizePath("/about")} content={t("about")} />
+        <NavComponent link={localizePath("/about")} content={t("contactMe")} />
     </nav>
     <div class="dropdown">
         <button class="dropbtn">{t("menu")}</button>
         <div class="dropdown-content">
-            <a class="component" href="/" >{t("home")}</a>
-            <a class="component" href="/games" >{t("games")}</a>
-            <a class="component" href="/about" >{t("about")}</a>
-            <a class="component" href="/about" >{t("contactMe")}</a>
+            <a class="component" href="/">{t("home")}</a>
+            <a class="component" href="/games">{t("games")}</a>
+            <a class="component" href="/about">{t("about")}</a>
+            <a class="component" href="/about">{t("contactMe")}</a>
         </div>
     </div>
 </header>
@@ -31,6 +29,7 @@ import { t } from "i18next";
 <style>
     header {
         width: 100%;
+        height: 3rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -40,13 +39,14 @@ import { t } from "i18next";
         position: sticky;
         top: 0;
     }
-    #language {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        max-width: 20%;
-        flex-grow: 1;
+
+    .customLanguageSelector {
+        font-family: inherit;
+        background-color: #57ccc6;
+        color: #242424;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
     }
 
     .desktop {
@@ -78,13 +78,15 @@ import { t } from "i18next";
     }
 
     .dropbtn {
-        background-color: #45a29e;
-        color: #c5c6c7;
+        background-color: #57ccc6;
+        color: #242424;
         font-size: clamp(1rem, 1.5vw, 2rem);
         border: none;
         border-radius: 5px;
         padding-top: 10%;
         padding-bottom: 5%;
+        width: 70px;
+        text-align: center;
     }
 
     .dropdown {
