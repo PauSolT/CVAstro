@@ -5,20 +5,31 @@ import NavComponent from "./NavComponent.astro";
 import { t } from "i18next";
 // @ts-ignore
 import { localizePath } from "astro-i18next";
+
+const { pathname } = Astro.url;
+
 ---
 
 <header>
-    <LanguageSelector  class="customLanguageSelector"/>
+    <!-- <LanguageSelector  class="customLanguageSelector"/>
+    <button id="es">español { localizePath(pathname , "es") }</button>
+    <button id="en">español {  localizePath(pathname , "en")}</button>
+    <button id="ca">español {  localizePath(pathname , "ca")}</button> -->
+    
+    <a href={localizePath(pathname , "es")}>Español</a>
+    <a href={localizePath(pathname , "en")}>English</a>
+    <a href={localizePath(pathname , "ca")}>Català</a>
+    
     <nav class="desktop">
         <NavComponent link={localizePath("/")} content={t("home")} />
         <NavComponent link={localizePath("/games")} content={t("games")} />
-        <NavComponent link={localizePath("/about")} content={t("about")} />
-        <NavComponent link={localizePath("/about")} content={t("contactMe")} />
+        <NavComponent link={localizePath("/about#")} content={t("about")} />
+        <NavComponent link={localizePath("/about#contactMe")} content={t("contactMe")} />
     </nav>
     <div class="dropdown">
         <button class="dropbtn">{t("menu")}</button>
         <div class="dropdown-content">
-            <a class="component" href="/">{t("home")}</a>
+            <a class="component" href={localizePath("/")}>{t("home")}</a>
             <a class="component" href="/games">{t("games")}</a>
             <a class="component" href="/about">{t("about")}</a>
             <a class="component" href="/about">{t("contactMe")}</a>
@@ -142,3 +153,28 @@ import { localizePath } from "astro-i18next";
         }
     }
 </style>
+
+<script>
+    const buttonEn = document.getElementById("en");
+    const buttonEs = document.getElementById("es");
+    const buttonCa = document.getElementById("ca");
+
+    buttonEn?.addEventListener('click', () => cl(""));
+    buttonEs?.addEventListener('click', () => cl("es"));
+    buttonCa?.addEventListener('click', () => cl("ca"));
+
+
+    function cl(l: string){
+        console.log(location)
+        localizePath()
+        // const pathSplit = location.pathname.split("/");
+        // pathSplit.splice(0, 1);
+        // if (pathSplit.length >= 2)
+        // {
+        //     console.log(pathSplit)
+        // } else {
+        //     console.log(pathSplit)
+        // }
+        // location = "/" + l;
+    }
+</script>
