@@ -93,7 +93,7 @@ const { pathname } = Astro.url;
         position: relative;
         display: inline-block;
         align-self: center;
-        margin-right: 8%;
+        margin-right: 5%;
     }
 
     .dropdown-content {
@@ -126,19 +126,22 @@ const { pathname } = Astro.url;
         background-color: #45a29e;
     }
 
-    @media only screen and (min-width: 760px) {
+    @media only screen and (min-width: 1200px) {
         .dropdown {
             display: none;
         }
     }
 
+    @media only screen and (max-width: 1200px) {
+        .desktop {
+            display: none;
+        }
+    }
+
+
     @media only screen and (max-width: 760px) {
         #language {
             max-width: 35%;
-        }
-
-        .desktop {
-            display: none;
         }
     }
 </style>
