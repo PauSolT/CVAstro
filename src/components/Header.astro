@@ -1,7 +1,8 @@
 ---
 import NavComponent from "./NavComponent.astro";
 
-import { t } from "i18next";
+import i18next, { t } from "i18next";
+
 // @ts-ignore
 import { localizePath } from "astro-i18next";
 
@@ -28,9 +29,9 @@ const { pathname } = Astro.url;
         <button class="dropbtn">{t("menu")}</button>
         <div class="dropdown-content">
             <a class="component" href={localizePath("/")}>{t("home")}</a>
-            <a class="component" href="/games">{t("games")}</a>
-            <a class="component" href="/about">{t("about")}</a>
-            <a class="component" href="/about">{t("contactMe")}</a>
+            <a class="component" href={localizePath("/games")}>{t("games")}</a>
+            <a class="component" href={localizePath("/about#")}>{t("about")}</a>
+            <a class="component" href={localizePath("/about#contactMe")}>{t("contactMe")}</a>
         </div>
     </div>
 </header>
