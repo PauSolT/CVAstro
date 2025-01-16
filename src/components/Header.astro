@@ -1,8 +1,8 @@
 ---
-import { LanguageSelector } from "astro-i18next/components";
 import NavComponent from "./NavComponent.astro";
 
-import { t } from "i18next";
+import i18next, { t } from "i18next";
+
 // @ts-ignore
 import { localizePath } from "astro-i18next";
 
@@ -11,9 +11,9 @@ const { pathname } = Astro.url;
 
 <header>
     <div id="language">
-        <NavComponent link={localizePath(pathname, "ca")} content="CAT" />
-        <NavComponent link={localizePath(pathname, "es")} content="ESP" />
-        <NavComponent link={localizePath(pathname, "en")} content="ENG" />
+        <NavComponent link={localizePath(pathname, "ca")} content="CA" />
+        <NavComponent link={localizePath(pathname, "es")} content="ES" />
+        <NavComponent link={localizePath(pathname, "en")} content="EN" />
     </div>
 
     <nav class="desktop">
@@ -24,14 +24,16 @@ const { pathname } = Astro.url;
             link={localizePath("/about#contactMe")}
             content={t("contactMe")}
         />
+        <NavComponent link={"/CVs/PAUCV_" + i18next.language.toUpperCase() +".pdf"} content="DOWNLOAD CV" download={"PauSole_CV"}/>
     </nav>
     <div class="dropdown">
         <button class="dropbtn">{t("menu")}</button>
         <div class="dropdown-content">
             <a class="component" href={localizePath("/")}>{t("home")}</a>
-            <a class="component" href="/games">{t("games")}</a>
-            <a class="component" href="/about">{t("about")}</a>
-            <a class="component" href="/about">{t("contactMe")}</a>
+            <a class="component" href={localizePath("/games")}>{t("games")}</a>
+            <a class="component" href={localizePath("/about#")}>{t("about")}</a>
+            <a class="component" href={localizePath("/about#contactMe")}>{t("contactMe")}</a>
+            <a class="component" href={"/CVs/PAUCV_" + i18next.language.toUpperCase() +".pdf"}>DOWNLOAD CV</a>
         </div>
     </div>
 </header>
@@ -91,7 +93,7 @@ const { pathname } = Astro.url;
         position: relative;
         display: inline-block;
         align-self: center;
-        margin-right: 8%;
+        margin-right: 5%;
     }
 
     .dropdown-content {
@@ -124,19 +126,22 @@ const { pathname } = Astro.url;
         background-color: #45a29e;
     }
 
-    @media only screen and (min-width: 760px) {
+    @media only screen and (min-width: 1200px) {
         .dropdown {
             display: none;
         }
     }
 
+    @media only screen and (max-width: 1200px) {
+        .desktop {
+            display: none;
+        }
+    }
+
+
     @media only screen and (max-width: 760px) {
         #language {
             max-width: 35%;
-        }
-
-        .desktop {
-            display: none;
         }
     }
 </style>
