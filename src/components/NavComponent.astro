@@ -1,8 +1,9 @@
 ---
-const { link, content, target = "_self" } = Astro.props
+
+const { link, content, target = "_self", download = undefined} = Astro.props
 ---
 
-<a class="component" href={link} target={target}>{content}</a>
+<a class="component" href={link} target={target} download={download ? '' : undefined} >{content}</a>
 
 <style>
     a {
