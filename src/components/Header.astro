@@ -24,7 +24,7 @@ const { pathname } = Astro.url;
             link={localizePath("/about#contactMe")}
             content={t("contactMe")}
         />
-        <NavComponent link={"/CVs/PAUCV_" + i18next.language.toUpperCase() +".pdf"} content="DOWNLOAD CV" download={"PauSole_CV"}/>
+        <NavComponent link={"/CVs/PAUCV_" + i18next.language.toUpperCase() +".pdf"} content={t("downloadCV")} download={"PauSole_CV"}/>
     </nav>
     <div class="dropdown">
         <button class="dropbtn">{t("menu")}</button>
@@ -33,7 +33,7 @@ const { pathname } = Astro.url;
             <a class="component" href={localizePath("/games")}>{t("games")}</a>
             <a class="component" href={localizePath("/about#")}>{t("about")}</a>
             <a class="component" href={localizePath("/about#contactMe")}>{t("contactMe")}</a>
-            <a class="component" href={"/CVs/PAUCV_" + i18next.language.toUpperCase() +".pdf"}>DOWNLOAD CV</a>
+            <a class="component" href={"/CVs/PAUCV_" + i18next.language.toUpperCase() +".pdf"}>{t("downloadCV")}</a>
         </div>
     </div>
 </header>
