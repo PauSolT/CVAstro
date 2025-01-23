@@ -54,8 +54,13 @@ const { title, genre, description, imageUrl } = Astro.props;
         padding-right: 2%;
         min-height: 100px;
     }
-    .project .projectImg {
-        width: clamp(20%, 70%, 75%);
-        height: auto;
+
+    .moreInfo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
     }
 </style>
