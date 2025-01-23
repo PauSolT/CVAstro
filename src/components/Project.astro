@@ -17,6 +17,9 @@ const { title, genre, description, imageUrl } = Astro.props;
 
 <style>
     .project {
+        > .content {
+            z-index: 1;
+        }
         display: flex;
         flex-direction: column;
         justify-content: center;
