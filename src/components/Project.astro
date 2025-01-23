@@ -1,47 +1,66 @@
 ---
 import { Image } from "astro:assets";
 
-const { title, genre, description, srcImage, loadImageType, urlSite, titleText } =
-    Astro.props;
+const { title, genre, description, imageUrl } = Astro.props;
 ---
 
 <div class="project">
-    <h3>{title}</h3>
-    <a title={titleText} target="_blank" href={urlSite}>
-        <Image
-            src={srcImage}
-            alt={title}
-            class="projectImg"
-            inferSize
-            loading={loadImageType}
-        />
-    </a>
-    <h4>{genre}</h4>
-    <p>{description}</p>
+    <img src={imageUrl} alt={title} />
+    <div class="content">
+        <h3 class="title">{title}</h3>
+        <div class="moreInfo">
+            <h4>{genre}</h4>
+            <p>{description}</p>
+        </div>
+    </div>
 </div>
 
 <style>
     .project {
+        > .content {
+            z-index: 1;
+        }
+        > img {
+            position: absolute;
+            width: 100%;
+            min-height: 280px;
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #45a29e;
+        flex-direction: column-reverse;
+        color: #c5c6c7;
+
+        max-width: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 2%;
+        min-height: 280px;
     }
     h3 {
         font-style: italic;
         font-weight: bold;
         text-overflow: ellipsis;
-        overflow: hidden;
         white-space: nowrap;
     }
+    h4 {
+        margin: 0;
+    }
+
     p {
         color: #c5c6c7;
-        text-align: justify;
-        text-justify: inter-word;
+        padding-left: 2%;
+        padding-right: 2%;
+        min-height: 100px;
     }
-    .project .projectImg {
-        width: clamp(20%, 70%, 75%);
-        height: auto;
+
+    .moreInfo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
     }
 </style>
