@@ -5,18 +5,14 @@ const { title, genre, description, imageUrl } = Astro.props;
 ---
 
 <div class="project">
-    <h3>{title}</h3>
-    <a title={titleText} target="_blank" href={urlSite}>
-        <Image
-            src={srcImage}
-            alt={title}
-            class="projectImg"
-            inferSize
-            loading={loadImageType}
-        />
-    </a>
-    <h4>{genre}</h4>
-    <p>{description}</p>
+    <img src={imageUrl} alt={title} />
+    <div class="content">
+        <h3 class="title">{title}</h3>
+        <div class="moreInfo">
+            <h4>{genre}</h4>
+            <p>{description}</p>
+        </div>
+    </div>
 </div>
 
 <style>
