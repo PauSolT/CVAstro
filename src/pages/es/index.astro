@@ -1,9 +1,6 @@
 ---
 import Project from "../../components/Project.astro";
 import Layout from "../../layouts/Layout.astro";
-import SlimeDefenseImage from "../../../src/assets/Images/SlimeDefense.webp";
-import BekkusImage from "../../../src/assets/Images/bekkus.webp";
-import BiluxImage from "../../../src/assets/Images/bilux.webp";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
@@ -11,54 +8,97 @@ changeLanguage("es");
 
 <Layout>
     <div class="index">
-        <div class="introduction">
-            <h1>PAU SOLÉ</h1>
-            <h2>{t("ocupation")}</h2>
-            <h3>
-                {t("homeDescription")}
-            </h3>
-        </div>
-        <div class="projectList">
+        <section class="introduction">
+            <video autoplay loop muted class="videoBg">
+                <source
+                    src="/src/assets/Videos/bilux_trailer.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <div class="heroContent">
+                <h1>PAU SOLÉ</h1>
+                <h2>{t("ocupation")}</h2>
+                <h3>
+                    {t("homeDescription")}
+                </h3>
+            </div>
+        </section>
+
+        <section class="projects">
             <h2>{t("projectsTitle")}</h2>
-            <Project
-                title="1. BEKKUS"
-                genre={t("bekkusGenre")}
-                srcImage={BekkusImage}
-                loadImageType="eager"
-                description={t("bekkusDescription")}
-                urlSite="https://ottarastudio.itch.io/bekkus"
-                titleText="Go to Bekkus!"
-            />
-            <Project
-                title="2. BILUX"
-                genre={t("biluxGenre")}
-                srcImage={BiluxImage}
-                loadImageType="lazy"
-                description={t("biluxDescription")}
-                urlSite="https://drhut94.itch.io/bilux"
-                titleText="Go to Bilux!"
-            />
-            <Project
-                title="3. SLIME DEFENSE"
-                genre={t("slimeGenre")}
-                srcImage={SlimeDefenseImage}
-                loadImageType="lazy"
-                description={t("slimeDescription")}
-                urlSite="https://pausol.itch.io/slime-defense"
-                titleText="Go to Slime Defense!"
-            />
-        </div>
+            <div class="projectList">
+                <Project
+                    title="BEKKUS"
+                    genre={t("bekkusGenre")}
+                    imageUrl="/img/projects/bekkus.webp"
+                    description={t("bekkusDescription")}
+                />
+                <Project
+                    title="BILUX"
+                    genre={t("biluxGenre")}
+                    imageUrl="/img/projects/bilux.webp"
+                    description={t("biluxDescription")}
+                />
+                <Project
+                    title="SLIME DEFENSE"
+                    genre={t("slimeGenre")}
+                    imageUrl="/img/projects/SlimeDefense.webp"
+                    description={t("slimeDescription")}
+                />
+            </div>
+        </section>
     </div>
 </Layout>
 
 <style>
     .index {
-        max-width: 70%;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .introduction {
+        height: 95vh;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .videoBg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        opacity: 0.3;
+    }
+
+    .biluxTrailer {
+        position: relative;
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        background-size: cover;
+    }
+
+    .heroContent {
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .projectList {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
     }
 
     h1,
@@ -66,7 +106,24 @@ changeLanguage("es");
         color: #66fcf1;
     }
 
+    h1 {
+        font-size: clamp(1em, 7vw, 6rem);
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: clamp(1em, 3vw, 6rem);
+    }
+
     h3 {
-        color: #45a29e;
+        color: #61ddd7;
+        padding-bottom: 20%;
+    }
+
+    @media only screen and (max-width: 760px) {
+        .projects {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 </style>
