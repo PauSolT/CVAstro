@@ -26,11 +26,17 @@ const { title, genre, description, imageUrl } = Astro.props;
             min-height: 280px;
             mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
         }
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #45a29e;
+        flex-direction: column-reverse;
+        color: #c5c6c7;
+
+        max-width: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 2%;
+        min-height: 280px;
     }
     h3 {
         font-style: italic;
