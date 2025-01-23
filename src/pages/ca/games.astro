@@ -13,28 +13,28 @@ changeLanguage("ca");
 <Layout>
     <div class="gamesList">
         <Game
-            title="1. BEKKUS"
+            title="BEKKUS"
             srcImage={BekkusImage}
             description={t("bekkusGame")}
             urlSite="https://ottarastudio.itch.io/bekkus"
             titleText="Go to Bekkus!"
         />
         <Game
-            title="2. BILUX"
+            title="BILUX"
             srcImage={BiluxImage}
             description={t("biluxGame")}
             urlSite="https://drhut94.itch.io/bilux"
             titleText="Go to Bilux!"
         />
         <Game
-            title="3. SLIME DEFENSE"
+            title="SLIME DEFENSE"
             srcImage={SlimeDefenseImage}
             description={t("slimeGame")}
             urlSite="https://pausol.itch.io/slime-defense"
             titleText="Go to Slime Defense!"
         />
         <Game
-            title="4. STAR TAPS"
+            title="STAR TAPS"
             srcImage={StarTapsImage}
             description={t("starGame")}
             urlSite="https://pausol.itch.io/star-taps"
@@ -47,5 +47,12 @@ changeLanguage("ca");
     .gamesList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 760px) {
+        .gamesList {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 </style>
