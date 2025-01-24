@@ -11,6 +11,7 @@ changeLanguage("en");
 ---
 
 <Layout>
+    <h1>{t("games")}</h1>
     <div class="gamesList">
         <Game
             title="BEKKUS"
@@ -44,6 +45,10 @@ changeLanguage("en");
 </Layout>
 
 <style>
+    h1 {
+        text-align: center;
+        color: #66fcf1;
+    }
     .gamesList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
